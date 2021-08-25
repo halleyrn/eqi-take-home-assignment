@@ -52,6 +52,8 @@ to view the running application.
 2. Make sure that the project has the correct permissions and API enabled.  
 3. Push your files to the cloud and build your image: `gcloud builds submit`  
 
+The console will output a ton of text. Don't be intimidated! Search the output for a line that contains `Service URL: `
+--this will be public URL that your image has been deployed to.
 
 ## Set up Build on Google App Engine Instructions
 *This set of instructions does not successfully deploy the application. Upon opening the 
@@ -67,6 +69,7 @@ service in your browser, you will see a '502 Gateway error'.*
 
 
 ## Usage
+Go to `https://eiq-assignment-rq7vlrxi6q-wl.a.run.app`  
 1. Click `Choose File` to select a file. The chosen filename will preview on the screen.
 2. Once you have verified the file name is correct, click `Submit` 
 
