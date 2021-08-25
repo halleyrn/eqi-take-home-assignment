@@ -1,0 +1,11 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    args: ['-c', 'docker build -t gcr.io/$PROJECT_ID/eiq-assignment .']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/eiq-assignment']
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args: ['run', 'deploy', 'eiq-assignment', '--image', 'gcr.io/$PROJECT_ID/eiq-assignment', '--platform', 'managed', '--region', 'us-west2', '--allow-unauthenticated']
+images:
+  - "gcr.io/$PROJECT_ID/eiq-assignment"
