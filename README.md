@@ -9,6 +9,8 @@ This application was made to address the following prompt:
 > 
 > Build, push, and deploy a docker container on Kubernetes Engine that performs the above validations for an uploaded .csv file.
 
+**TODO: add Kubernetes to this application**
+
 ## Build Instructions
 The following commands will build this application on a Mac:
 ```bash
